@@ -1,104 +1,102 @@
+# 🎬 Movies Watchlist
 
-# Movie Watchlist React
+A Movie Watchlist Application that allows users to search, save, and manage their favorite movies. Built with React.js (frontend) and Node.js/Express.js (backend), this app provides an interactive and seamless user experience for movie lovers.
 
-This app helps you search any movie from the web any helps you keep track of your "Watchlist", "Watched".
+## 🚀 Features
 
-You can remove any movie,move your movies from "Watched" to "Watchlist" and vice-versa and the total number of movie in list will be shown along with the movie cards.
+🔍 Search for Movies – Fetch movie details from an external API.
 
-It is very benefecial for movie addictive people who can't keep track of the movies they saw/willing to see.
+📌 Add to Watchlist – Save movies for future viewing.
 
-## Demo
+✅ Mark as Watched – Keep track of watched movies.
 
-Project Demo
+🗑️ Remove from Watchlist – Delete unwanted entries.
 
-https://user-images.githubusercontent.com/76695320/122665382-79ab5980-d1c4-11eb-939e-5d101c140d3d.mp4
+🎨 User-Friendly UI – Responsive and visually appealing design.
 
-  
-## Screenshots
+🔐 User Authentication – Secure login and registration (optional).
 
-![Screenshot (1019)](https://user-images.githubusercontent.com/76695320/122665199-7fed0600-d1c3-11eb-8f80-9dfa308fdd11.png)
+## 🛠 Tech Stack
 
-![Screenshot (1020)](https://user-images.githubusercontent.com/76695320/122665204-85e2e700-d1c3-11eb-8f6b-4d0aef3c4fde.png)
+Frontend: React.js, Tailwind CSS
 
-![Screenshot (1021)](https://user-images.githubusercontent.com/76695320/122665210-8aa79b00-d1c3-11eb-97a6-ab25d4d498e7.png)
+Backend: Node.js, Express.js
 
-![Screenshot (1022)](https://user-images.githubusercontent.com/76695320/122665212-9004e580-d1c3-11eb-950d-1593809a63aa.png)
+Database: MongoDB (if using persistent storage)
 
-![Screenshot (1023)](https://user-images.githubusercontent.com/76695320/122665215-94c99980-d1c3-11eb-918b-f8115331d53f.png)
+API: TMDB API / OMDB API (for fetching movie data)
 
-![Screenshot (1024)](https://user-images.githubusercontent.com/76695320/122665224-9d21d480-d1c3-11eb-91b4-99f9d16d0617.png)
+State Management: Redux / Context API
 
-![Screenshot (1025)](https://user-images.githubusercontent.com/76695320/122665228-a27f1f00-d1c3-11eb-8616-de28da4f6a15.png)
+Authentication: Firebase Auth / JWT (optional)
 
-![Screenshot (1027)](https://user-images.githubusercontent.com/76695320/122665231-a9a62d00-d1c3-11eb-82de-9bd364973e35.png)
-
-![Screenshot (1028)](https://user-images.githubusercontent.com/76695320/122665237-ae6ae100-d1c3-11eb-9342-91898f5a930e.png)
-
-![Screenshot (1029)](https://user-images.githubusercontent.com/76695320/122665241-b296fe80-d1c3-11eb-8b13-4ffc97237b39.png)
+## 📁 Project Structure
 
 
-## API Reference
 
-Api used : [The Movie DataBase](https://www.themoviedb.org/)
+/Movies-watchlist
 
-#### Get all movies
+│── /frontend       # React.js app (UI & Components)
 
-```http
-  GET /api/movies
-  
-  https://api.themoviedb.org/3/search/movie?api_key=${REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}
-```
+│── /backend        # Node.js & Express.js (API & DB)
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-| `movie name`      | `string` | **Required**. Name of movie to fetch |
-  
-  
-## Run Locally
+│── /public         # Static assets
 
-Clone the project
+│── /database       # MongoDB schema (if applicable)
 
-```bash
-  git clone https://github.com/saikatXshrey/Movie-Watchlist-React.git
-```
+│── README.md       # Documentation
 
-Go to the project directory
+## 🚀 Installation & Setup
 
-```bash
-  cd my-project
-```
+### 1️⃣ Clone the Repository
 
-Install dependencies
 
-```bash
-  npm install
-```
+git clone https://github.com/abhinav744/watchlist.git
 
-Start the server
+cd Movies-watchlist
 
-```bash
-  npm run start
-```
+### 2️⃣ Frontend Setup (React.js)
 
-  
-  
-## Deployment
 
-To deploy this project run
+cd frontend
 
-```bash
-  npm run deploy
-```
+npm install
 
-  
-## Lessons Learned
+npm start
 
-This project heavily uses "React Routing" as we needed to route between "Watchlist","Watched" and "Add" page without any reload so routing plays an important role here.
+### 3️⃣ Backend Setup (Node.js & Express.js)
 
-And ofcourse we needed to maintain states thats why "useState" was used. Along with "useEffect" for causing side effect and "fetch api" for fetching the movie according to our search from the "TMDb Api".
 
-There was a major problem about the movie switching control i.e when we would want to remove a movie/move a movie from Watchlist to watched/vice-versa then there was a rising problem about "prop-drilling" which was solved using "Context Api" for removing/switching a GLobalCOntext was maintained.
 
-And another thing was to store the the movies which we saved for Watchlist/Watched even if we close the app and for that i took the help of "localstorage".
-  
+cd backend
+
+npm install
+
+node server.js
+
+### 4️⃣ Run the Application
+
+Frontend runs on http://localhost:3000/
+
+Backend API runs on http://localhost:5000/
+
+## 📌 How to Use
+
+Search for a movie using the search bar.
+
+Click "Add to Watchlist" to save the movie.
+
+Mark movies as watched or remove them from the list.
+
+Enjoy a personalized movie collection!
+
+## 📌 Contributing
+
+Contributions are welcome! Feel free to:
+
+✅ Fork the repository
+
+✅ Create a new branch
+
+✅ Make changes and submit a pull request
+
